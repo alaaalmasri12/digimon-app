@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faviourite anime list</title>
+</head>
+<body>
+    <h1>faviourit anime</h1>
+    <div class="pokmon-box">
+    <%pokmon.forEach(value=>{%>
+        <div class="pokmon-box">
+        <h1>Title:<%=value.name%></h1>
+        <img src="<%=value.image%>" alt="<%=value.name%>">
+        <h3>Level:<%=value.level%></h3>
+        <a href="/pokmon/<%=value.id%>">View Details</a>
+    </div>
+
+    <%})%>
+</div>
+</body>
+</html>

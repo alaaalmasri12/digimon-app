@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokmon app</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+</head>
+<body>
+    <h1>pokmon app</h1>
+    <div class="pokmon-boxes">
+        <%pokmon.forEach(value=>{%>
+                <div class="pokmon-box">
+            <h1>Title:<%=value.name%></h1>
+            <img src="<%=value.image%>" alt="<%=value.name%>">
+            <h3>Level:<%=value.level%></h3>
+            <form action="/add" method="POST">
+            <input type="text" name="name" value="<%=value.name%>">
+            <input type="text" name="image" value="<%=value.image%>">
+            <input type="text" name="level" value="<%=value.level%>">
+    <button type="submit">ADD</button>
+            </form>
+        </div>
+        <%})%>
+    </div>
+   
+     
+</body>
+</html>

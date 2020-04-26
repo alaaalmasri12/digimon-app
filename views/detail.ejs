@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokmon details</title>
+</head>
+<body>
+    <h1>pokmon details</h1>
+
+        <%item.forEach(value=>{%>
+            <h1>Title:<%=value.name%></h1>
+            <img src="<%=value.image%>" alt="<%=value.name%>">
+            <h3>Level:<%=value.level%></h3>
+            <form method="POST" action="/delete/<%=value.id%>?_method=DELETE">
+                <button type="submit">Delete</button>
+              </form>
+              <form method="POST" action="/update/<%=value.id%>?_method=put">
+                <input type="text" name="name" value="<%=value.name%>">
+                <input type="text" name="image" value="<%=value.image%>">
+                <input type="text" name="level" value="<%=value.level%>">
+                <button type="submit">Update</button>
+              </form>
+        <%})%>
+
+
+        
+
+</body>
+</html>

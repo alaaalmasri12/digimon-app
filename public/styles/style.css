@@ -1,0 +1,17 @@
+body
+{
+    background-color: aqua;
+}
+.pokmon-boxes
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pokmon-box {
+    border: 1px solid #000000;
+    justify-content: space-evenly;
+    width: 33%;
+    margin-bottom: 3%;
+}
